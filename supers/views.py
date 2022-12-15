@@ -11,10 +11,10 @@ from .models import Super
 @api_view(['GET','POST'])
 def all_supers(request):
     if request.method == 'GET':
-        super_types = Super.objects.all()
-        serializer = SuperSerializers(super_types, many=True)
+        super = Super.objects.all()
+        serializer = SuperSerializers(super, many=True)
         return Response(serializer.data)
-    elif request.method == 'Post':
+    elif request.method == 'POST':
         serializer = SuperSerializers(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
