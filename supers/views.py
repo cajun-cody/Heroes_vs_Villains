@@ -5,6 +5,8 @@ from django.shortcuts import get_object_or_404
 from .serializers import SuperSerializers
 from .models import Super
 
+
+
 # Create your views here.
 @api_view(['GET','POST'])
 def all_supers(request):
