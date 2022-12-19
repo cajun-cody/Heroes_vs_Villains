@@ -10,7 +10,7 @@
 			"name": "Supers (supers App)",
 			"item": [
 				{
-					"name": "GET super by id",
+					"name": "GET_super_by_id",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -34,7 +34,7 @@
 					"response": []
 				},
 				{
-					"name": "UPDATE existing super in db",
+					"name": "UPDATE_existing_super_by_id",
 					"request": {
 						"method": "PUT",
 						"header": [],
@@ -68,7 +68,7 @@
 					"response": []
 				},
 				{
-					"name": "DELETE super",
+					"name": "DELETE_super",
 					"request": {
 						"method": "DELETE",
 						"header": [],
@@ -92,12 +92,12 @@
 					"response": []
 				},
 				{
-					"name": "GET all supers",
+					"name": "GET_all_supers",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/supers/",
+							"raw": "http://127.0.0.1:8000/api/supers",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -108,15 +108,14 @@
 							"port": "8000",
 							"path": [
 								"api",
-								"supers",
-								""
+								"supers"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "POST new super to db",
+					"name": "Create_new_super",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -149,7 +148,7 @@
 					"response": []
 				},
 				{
-					"name": "GET all supers (Param=Hero)",
+					"name": "GET_all_Heroes (Param)",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -178,7 +177,7 @@
 					"response": []
 				},
 				{
-					"name": "GET all supers (Param=Villain)",
+					"name": "GET_all_Villains (Param)",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -210,7 +209,146 @@
 		},
 		{
 			"name": "Super_Types (super_types App- Bonus Requests)",
-			"item": []
+			"item": [
+				{
+					"name": "GET_All_Super_Types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/super_types",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"super_types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_SUper_Type_by_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/super_types/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"super_types",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create_Super_Types",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"type\": \"Traitor\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/super_types/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"super_types",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Super_Type",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"type\": \"Villain\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/super_types/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"super_types",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Super_Type",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/super_types/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"super_types",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

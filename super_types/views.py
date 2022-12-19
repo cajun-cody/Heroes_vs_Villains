@@ -13,7 +13,7 @@ def super_types_list(request):
         super_types = SuperType.objects.all()
         serializer = SuperTypeSerializers(super_types, many=True)
         return Response(serializer.data)
-    elif request.method == 'Post':
+    elif request.method == 'POST':
         serializer = SuperTypeSerializers(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
